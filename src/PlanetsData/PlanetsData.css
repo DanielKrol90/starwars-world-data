@@ -5,23 +5,24 @@
     background-color: #f1f2f382;
     border-radius: 10px;
     font-size: 16px;
+    cursor: pointer;
   }
 
-  .planet .planetName {
+.planet .planetName {
     color:#d23939;
     text-align: center;
     font-weight: 500;
   }
 
-  .planet .planetName span {
+.planet .planetName span {
     color: #3990d2;
   }
 
-.listOfPlanets {
+.planet .listOfPlanets {
     list-style: none;
     text-transform: uppercase;
   }
 
-  .listOfPlanets li span {
+.planet .listOfPlanets li span {
     color: #3990d2;
   }
