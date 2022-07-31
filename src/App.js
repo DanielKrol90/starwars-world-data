@@ -9,6 +9,7 @@ function App() {
   const [planets, setPlanets] = useState([]);
   const [pageOnView, setPageOnView] = useState();
   const [planetsPerPage] = useState(10);
+  const [totalPlanets, setTotalPlanets] = useState([])
 
   const getPlanetsData = () => {
     
@@ -16,6 +17,7 @@ function App() {
       .get("https://swapi.dev/api/planets")
       .then((req) => {
         setPlanets(req.data.results);
+        setTotalPlanets(req.data)
         console.log(req.data);
       })
       .catch((error) => {
@@ -42,7 +44,7 @@ function App() {
         <Planets key={planets.name} planets={planets} />   
       )})}
       </div>
-        <Pagination totalPlanets={setPlanets.length} planetsPerPage={planetsPerPage} paginate={paginate} />
+        <Pagination totalPlanets={totalPlanets.count} planetsPerPage={planetsPerPage} paginate={paginate} />
     </div>
   );
 }
