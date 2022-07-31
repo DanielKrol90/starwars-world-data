@@ -1,38 +1,36 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import './App.css';
+import "./App.css";
+
+import Planets from './PlanetsData/PlanetsData'
 
 function App() {
-
-  const [planets, setPlanets] = useState([])
-
-
-
+  const [planets, setPlanets] = useState([]);
 
   const getPlanetsData = () => {
+  
     axios
-      .post('https://swapi.dev/api/planets')
+      .get("https://swapi.dev/api/planets/")
       .then((req) => {
-        setPlanets(req.data);
-        console.log(req.data);
+        setPlanets(req.data.results);
       })
-      .catch((err) => {
-        console.log("AXIOS ERROR: ", err);
+      .catch((error) => {
+        console.log("AXIOS ERROR: ", error);
       });
   };
 
+  useEffect(() => {
+    getPlanetsData();
+  }, []);
 
-
-
-
-
-  
   return (
     <div className="App">
       <h1>Star Wars Universe List of Planets</h1>
-        <div className="listPlanets">
-        </div>
-
+      <div className="listPlanets"></div>
+      {planets.map((planet) => {
+        return (
+        <Planets  key={planet.name} planets={planets} />   
+      )})}
     </div>
   );
 }

@@ -1,0 +1,19 @@
+.planet {
+    width: 90%;
+    margin: 10px 0;
+    padding: 10px 0;
+    background-color: #f1f2f3;
+    border-radius: 10px;
+  }
+
+  .planet .planetName {
+    color:#d2d239;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 500;
+  }
+
+
+.listOfPlanets {
+    list-style: none;
+  }
