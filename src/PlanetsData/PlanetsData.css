@@ -2,18 +2,26 @@
     width: 90%;
     margin: 10px 0;
     padding: 10px 0;
-    background-color: #f1f2f3;
+    background-color: #f1f2f382;
     border-radius: 10px;
+    font-size: 16px;
   }
 
   .planet .planetName {
-    color:#d2d239;
+    color:#d23939;
     text-align: center;
-    font-size: 1em;
     font-weight: 500;
   }
 
+  .planet .planetName span {
+    color: #3990d2;
+  }
 
 .listOfPlanets {
     list-style: none;
+    text-transform: uppercase;
+  }
+
+  .listOfPlanets li span {
+    color: #3990d2;
   }

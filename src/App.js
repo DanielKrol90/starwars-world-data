@@ -27,9 +27,9 @@ function App() {
     <div className="App">
       <h1>Star Wars Universe List of Planets</h1>
       <div className="listPlanets"></div>
-      {planets.map((planet) => {
+      {planets.map((planets) => {
         return (
-        <Planets  key={planet.name} planets={planets} />   
+        <Planets key={planets.name} planets={planets} />   
       )})}
     </div>
   );
