@@ -1,8 +1,8 @@
 .planet {
-    width: 90%;
+    width: 350px;
     margin: 10px 0;
     padding: 10px 0;
-    background-color: #f1f2f382;
+    background-color: #f1f2f398;
     border-radius: 10px;
     font-size: 16px;
     cursor: pointer;
@@ -21,8 +21,12 @@
 .planet .listOfPlanets {
     list-style: none;
     text-transform: uppercase;
+    display: block;
   }
-
+.planet .listOfPlanets li {
+    display: block;
+    text-align: center;
+  }
 .planet .listOfPlanets li span {
     color: #3990d2;
   }
