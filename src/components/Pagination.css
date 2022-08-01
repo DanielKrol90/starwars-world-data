@@ -21,3 +21,8 @@
     margin: 0 5px;
     border-radius: 10px;
 }
+
+.listOfPagination li a:hover {
+    color: black;
+    background-color: white;
+}
