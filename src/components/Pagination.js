@@ -16,9 +16,9 @@ const Pagination = (props) => {
         <ul className='listOfPagination'>
             {pageNumbers.map(number => (
                 <li key={number} className="pageItem">
-                <a onClick={() => props.paginate(number)} href='!#' className='page-link'>
-              {number}
-            </a>
+                  <a onClick={() => props.paginate(number)} href='!#' className='page-link'>
+                    {number}
+                  </a>
                 </li>
             ))}
         </ul>

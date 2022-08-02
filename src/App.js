@@ -4,21 +4,20 @@ import "./App.css";
 
 import Planets from './PlanetsData/PlanetsData';
 import Pagination from './components/Pagination';
+import SearchField from './components/SearchField';
 
 function App() {
+
   const [planets, setPlanets] = useState([]);
-  const [pageOnView, setPageOnView] = useState();
   const [planetsPerPage] = useState(10);
   const [totalPlanets, setTotalPlanets] = useState([])
 
-  const getPlanetsData = () => {
-    
+  const getPlanetsData = (page) => {
     axios
-      .get("https://swapi.dev/api/planets")
+      .get("https://swapi.dev/api/planets?page=" + page)
       .then((req) => {
         setPlanets(req.data.results);
         setTotalPlanets(req.data)
-        console.log(req.data);
       })
       .catch((error) => {
         console.log("AXIOS ERROR: ", error);
@@ -27,24 +26,21 @@ function App() {
 
 
 
-
-
   useEffect(() => {
-    getPlanetsData();
+    getPlanetsData(1);
   }, []);
-
-  const paginate = pageNumber => setPageOnView(pageNumber);
 
   return (
     <div className="App">
       <h1>Star Wars Universe List of Planets</h1>
+      <SearchField setPlanets={setPlanets} />
       <div className="listPlanets">
       {planets.map((planets) => {
         return (
-        <Planets key={planets.name} planets={planets} />   
+        <Planets key={planets.name} planets={planets}  />   
       )})}
       </div>
-        <Pagination totalPlanets={totalPlanets.count} planetsPerPage={planetsPerPage} paginate={paginate} />
+        <Pagination totalPlanets={totalPlanets.count} planetsPerPage={planetsPerPage} paginate={getPlanetsData} />
     </div>
   );
 }
