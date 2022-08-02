@@ -16,6 +16,7 @@
 
 .planet .planetName span {
     color: #3990d2;
+    margin-left: 5px;
   }
 
 .planet .listOfPlanets {

@@ -1,0 +1,17 @@
+.searchField{
+    top:120px;
+    display: flex;
+    width: 70%;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.searchFieldInput {
+    width:100%;
+    height: 50px;
+    line-height: 2.5em;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: none;
+    text-align: center;
+}

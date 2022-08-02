@@ -9,7 +9,7 @@ const Planets = (props) => {
 
   return (
     <div className="planet" key={planet.name}>
-      <div className="planetName" onClick={() => {setDisplay(!display)}}> Information about planet <span>{planet.name}</span></div>
+      <div className="planetName" onClick={() => {setDisplay(!display)}}> Planet Name:  <span>{planet.name}</span></div>
       {display && <ul className="listOfPlanets">
         <li>Gravity:<span> {planet.gravity}</span></li>
         <li>Climate: <span>{planet.climate}</span></li>
