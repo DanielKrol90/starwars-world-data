@@ -6,6 +6,7 @@ import Planets from './PlanetsData/PlanetsData';
 import Pagination from './components/Pagination';
 import SearchField from './components/SearchField';
 
+
 function App() {
 
   const [planets, setPlanets] = useState([]);
@@ -33,7 +34,7 @@ function App() {
   return (
     <div className="App">
       <h1>Star Wars Universe List of Planets</h1>
-      <SearchField setPlanets={setPlanets} />
+      <SearchField setPlanets={setPlanets} setTotalPlanets={setTotalPlanets} />
       <div className="listPlanets">
       {planets.map((planets) => {
         return (

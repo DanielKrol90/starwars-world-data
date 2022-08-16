@@ -13,11 +13,13 @@ const SearchField = (props) => {
         .get(url + target)
         .then((req) => {
           props.setPlanets(req.data.results);
+          props.setTotalPlanets(req.data)
         })
         .catch((error) => {
           console.log("AXIOS ERROR: ", error);
         });
       };
+
 
   return (
     <div className="searchField">
