@@ -1,5 +1,6 @@
 Star Wars WORLD DATA - for learning purpose.
 React Project.
+LINK : <a href="https://starwars-datapage.netlify.app"> SEE IT </a>
 
 Working with API(Axios) to connect for data. Showing all planets then creating option to search choosen planet by name.
 Added pagination to show only 10 planets by page.
